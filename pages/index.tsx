@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { Button } from '../components/atoms/Button/Button'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -51,6 +52,8 @@ const Home: NextPage = () => {
             </p>
           </a>
         </div>
+
+        <Button label="ボタン" />
       </main>
 
       <footer className={styles.footer}>

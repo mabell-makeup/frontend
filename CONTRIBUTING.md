@@ -36,8 +36,8 @@
 
 ## 作業手順
 
-1. MasterブランチからFeatureブランチを作る (リリース前のため)
-`git checkout -b feature/MB-XX/add-hoge-component origin/master`
+1. MainブランチからFeatureブランチを作る (リリース前のため)
+`git checkout -b feature/MB-XX/add-hoge-component origin/main`
 1. 新規ブランチをPushする (リモートブランチを作成するとJiraの課題が**進行中**へ移動します)  
 `git push -u origin feature/MB-XX/add-hoge-component`  
 1. コードを変更する
@@ -50,7 +50,7 @@
 
 ## 動作確認手順
 
-動作確認手順については、[README.mdのStart Development](https://github.com/daiti0113/Joker-frontend#start-development)を参照してください。
+動作確認手順については、[README.mdのGetting Started](https://github.com/mabell-makeup/frontend#getting-started)を参照してください。
 
 ## テスト
 

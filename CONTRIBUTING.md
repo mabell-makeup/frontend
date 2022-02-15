@@ -2,7 +2,7 @@
 
 ## 課題
 
-課題は[Jira](https://mabell.atlassian.net/jira/software/c/projects/MB/boards/5/backlog?issueLimit=100)で管理しています。
+課題は[Jira](https://mabell.atlassian.net/jira/software/projects/MBL/boards/6)で管理しています。
 
 
 ## ブランチルール

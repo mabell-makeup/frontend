@@ -2,19 +2,17 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Button } from './components/atoms/Button/Button';
-
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react"
-import styled from '@emotion/styled'
+import { css } from '@emotion/react/';
+import styled from '@emotion/styled';
 
 const MyDiv = styled.div`
   margin-top: 50px;
   padding: 0 0 20px 30px;
-`;
+`
 
-const MyCss = css({
-    color: 'red',
-});
+const MyCss = css`
+  color: red;
+`
 
 function App() {
   return (

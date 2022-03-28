@@ -26,7 +26,9 @@
     "workbox-range-requests": "^5.1.4",
     "workbox-routing": "^5.1.4",
     "workbox-strategies": "^5.1.4",
-    "workbox-streams": "^5.1.4"
+    "workbox-streams": "^5.1.4",
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1"
   },
   "scripts": {
     "start": "react-scripts start",

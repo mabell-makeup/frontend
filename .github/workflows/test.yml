@@ -1,0 +1,14 @@
+name: React Test
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  echo-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: execute echo command
+        run: echo "Hello World!"

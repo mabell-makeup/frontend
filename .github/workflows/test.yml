@@ -5,8 +5,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  echo-hello:
+  run-test:
     runs-on: ubuntu-latest
     steps:
-      - name: execute echo command
-        run: echo "Hello World!"
+      - name: execute test command
+        run: npm run one-time-only-test

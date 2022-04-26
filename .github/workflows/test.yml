@@ -1,10 +1,10 @@
 name: Unit Test
 
-on: [push, pull_request, workflow_dispatch]
-
-jobs:
-  run-test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: execute test command
-        run: npm run one-time-only-test
+#on: [push, pull_request, workflow_dispatch]
+#
+#jobs:
+#  run-test:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: execute test command
+#        run: npm run one-time-only-test

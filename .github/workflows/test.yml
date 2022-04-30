@@ -1,0 +1,15 @@
+name: Unit Test
+
+on: [push, workflow_dispatch]
+
+jobs:
+  run-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.13.1'
+      - run: npm ci
+      - name: execute test command
+        run: npm run test:ci

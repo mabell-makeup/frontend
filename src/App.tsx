@@ -39,7 +39,7 @@ function App() {
           </p>
         </MyDiv>
         <div css={MyCss}>
-          <p> is emotion css activated...?</p>
+          <p>emotion css activated.</p>
         </div>
       </header>
     </div>

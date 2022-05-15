@@ -20,7 +20,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: build
-          path: public/
+          path: build/
 
   deploy:
     needs: build
@@ -30,14 +30,14 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: build
-        path: public/
+        path: build/
     - name: Publish to AWS S3
       uses: opspresso/action-s3-sync@master
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: ${{ secrets.AWS_REGION }}
-        FROM_PATH: "public/"
+        FROM_PATH: "build/"
         DEST_PATH: "s3://mabell-frontend-staging"
     - name: Clear cache in CloudFront
       uses: chetan/invalidate-cloudfront-action@v1.2

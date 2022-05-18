@@ -9,12 +9,12 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { css } from "@emotion/react"
 import styled from '@emotion/styled'
 
-const MyDiv = styled.div`
+const myDiv = styled.div`
   margin-top: 50px;
   padding: 0 0 20px 30px;
 `;
 
-const MyCss = css({
+const myCss = css({
   color: 'red',
 });
 
@@ -37,12 +37,12 @@ function App() {
             Learn React
           </a>
           <Button label="これはボタンです" />
-          <MyDiv>
+          <myDiv>
             <p>
               emotion styled activated.
             </p>
-          </MyDiv>
-          <div css={MyCss}>
+          </myDiv>
+          <div css={myCss}>
             <p>emotion css activated.</p>
           </div>
           <User></User>

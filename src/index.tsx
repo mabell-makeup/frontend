@@ -5,6 +5,8 @@ import { App } from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import { Provider } from 'react-redux'
+import { store } from './store'
 
 const queryClient = new QueryClient();
 
@@ -13,7 +15,9 @@ const root = createRoot(container!);
 root.render(
     <React.StrictMode>
         <QueryClientProvider client={queryClient}>
-            <App />
+            <Provider store={store}>
+                <App />
+            </Provider>
         </QueryClientProvider>
     </React.StrictMode>
 );

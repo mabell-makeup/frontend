@@ -9,7 +9,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { css } from "@emotion/react"
 import styled from '@emotion/styled'
 
-const myDiv = styled.div`
+const MyDiv = styled.div`
   margin-top: 50px;
   padding: 0 0 20px 30px;
 `;
@@ -37,11 +37,11 @@ function App() {
             Learn React
           </a>
           <Button label="これはボタンです" />
-          <myDiv>
+          <MyDiv>
             <p>
               emotion styled activated.
             </p>
-          </myDiv>
+          </MyDiv>
           <div css={myCss}>
             <p>emotion css activated.</p>
           </div>

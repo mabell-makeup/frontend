@@ -7,6 +7,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:snapshot": "react-scripts test --watchAll=false src/storyshots.test.js",
+    "test:unit": "react-scripts test --watchAll=false src/components",
     "test:ci": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",

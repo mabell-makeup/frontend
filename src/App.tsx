@@ -1,49 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Button } from './components/atoms/Button/Button';
-
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react"
-import styled from '@emotion/styled'
+import { FOOTER_HEIGHT, HEADER_HEIGHT } from "./constants/style";
 
-const MyDiv = styled.div`
-  margin-top: 50px;
-  padding: 0 0 20px 30px;
-`;
-
-const MyCss = css({
-    color: 'red',
-});
-
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Button label="これはボタンです" />
-        <MyDiv>
-          <p>
-            emotion styled activated.
-          </p>
-        </MyDiv>
-        <div css={MyCss}>
-          <p> is emotion css activated...?</p>
-        </div>
-      </header>
+    <div css={styles.container}>
+      <header css={css({ gridArea: "header", background: "#900" })}>mabell</header>
+      <div css={css({ gridArea: "left", background: "#090" })}>left</div>
+      <div css={css({ gridArea: "content", background: "#009" })}>content</div>
+      <div css={css({ gridArea: "right", background: "#990" })}>right</div>
+      <footer css={css({ gridArea: "footer", background: "#099" })}>footer</footer>
     </div>
   );
 }
 
-export default App;
+const styles = {
+  container: css({
+    display: "grid",
+    gridTemplateAreas: `
+        "header header header"
+        "left content right"
+        "footer footer footer"
+    `,
+    gridTemplateRows: `${HEADER_HEIGHT} minmax(calc(100vh - ${HEADER_HEIGHT} - ${FOOTER_HEIGHT}), auto) ${FOOTER_HEIGHT}`,
+    gridTemplateColumns: "236px 1fr 236px"
+  })
+}

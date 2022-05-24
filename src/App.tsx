@@ -1,16 +1,26 @@
+import './App.css';
+import User from './components/atoms/User/User'
+import { QueryClient, QueryClientProvider } from 'react-query';
+
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react"
 import { FOOTER_HEIGHT, HEADER_HEIGHT } from "./constants/style";
 
 export const App = () => {
+  const queryClient = new QueryClient();
+
   return (
-    <div css={styles.container}>
+      <QueryClientProvider client={queryClient}>
+      <div css={styles.container}>
       <header css={css({ gridArea: "header", background: "#900" })}>mabell</header>
-      <div css={css({ gridArea: "left", background: "#090" })}>left</div>
-      <div css={css({ gridArea: "content", background: "#009" })}>content</div>
-      <div css={css({ gridArea: "right", background: "#990" })}>right</div>
-      <footer css={css({ gridArea: "footer", background: "#099" })}>footer</footer>
+      <div css={css({ gridArea: "left", background: "#090" })}>Left</div>
+      <div css={css({ gridArea: "content", background: "#009" })}>
+        <User />
+      </div>
+      <div css={css({ gridArea: "right", background: "#990" })}>Right</div>
+      <footer css={css({ gridArea: "footer", background: "#099" })}>Footer</footer>
     </div>
+      </QueryClientProvider>
   );
 }
 

@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react"
 import { FOOTER_HEIGHT, HEADER_HEIGHT } from "./constants/style";
+import { TextInputCore } from './components/atoms/TextInputCore/TextInputCore';
 
 export const App = () => {
   const queryClient = new QueryClient();
@@ -15,6 +16,7 @@ export const App = () => {
       <header css={css({ gridArea: "header", background: "#900" })}>mabell</header>
       <div css={css({ gridArea: "left", background: "#090" })}>Left</div>
       <div css={css({ gridArea: "content", background: "#009" })}>
+        <TextInputCore />
         <User />
       </div>
       <div css={css({ gridArea: "right", background: "#990" })}>Right</div>

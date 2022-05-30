@@ -11,7 +11,7 @@ export const App = () => {
       <QueryClientProvider client={queryClient}>
       <div className={styles.container}>
       <header className={css({ gridArea: "header", background: "#900", display: "flex", alignItems: "center", padding: "0 20px" })}>
-        <TextInputCore className={css({maxWidth: 200})} />
+        <TextInputCore />
         <h1 className={css({margin: "auto"})}>mabell</h1>
       </header>
       <div className={css({ gridArea: "left", background: "#090" })}>Left</div>

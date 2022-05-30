@@ -8,11 +8,14 @@ type TextINputCoreProps = {
 }
 
 export const TextInputCore = ({className, ...props}: TextINputCoreProps) => {
-  return <input type="text" className={classNmaes([styles.container, className])} {...props} />
+  return <input type="text" placeholder="検索" className={classNmaes([styles.container, className])} {...props} />
 }
 
 const styles = {
   container: css({
-    height: 40,
+    height: 20,
+    padding: 10,
+    width: "100%",
+    maxWidth: 200
   })
 }

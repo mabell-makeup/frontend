@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
 import { Button } from './components/atoms/Button/Button';
 import User from './components/atoms/User/User'
 import { QueryClient, QueryClientProvider } from 'react-query';

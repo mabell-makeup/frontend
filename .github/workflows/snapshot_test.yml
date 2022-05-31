@@ -1,4 +1,4 @@
-name: Unit Test
+name: Snapshot Test
 
 on: [push, workflow_dispatch]
 
@@ -12,4 +12,4 @@ jobs:
           node-version: '16.13.1'
       - run: npm ci
       - name: execute test command
-        run: npm run test:unit
+        run: npm run test:snapshot

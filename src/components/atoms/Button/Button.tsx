@@ -1,9 +1,12 @@
+import React from "react"
+
 type ButtonProps = {
   label: string
+  onClick?: () => void
 }
 
-export const Button = ({label}: ButtonProps) => {
+export const Button: React.FC<ButtonProps> = ({label, onClick}) => {
     return (
-        <button>{label}</button>
+        <button onClick={onClick}>{label}</button>
     )
 }

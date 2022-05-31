@@ -1,9 +1,7 @@
 import User from './components/atoms/User/User'
-import { QueryClient, QueryClientProvider } from 'react-query';
 import { css } from "@emotion/css"
 import { FOOTER_HEIGHT, HEADER_HEIGHT } from "./constants/style";
 import { TextInputCore } from './components/atoms/TextInputCore/TextInputCore';
-import { css } from "@emotion/react"
 import { Button } from './components/atoms/Button/Button';
 import { decrement, increment } from './slices/counter';
 import { useAppDispatch, useAppSelector } from './helper/store';
@@ -13,7 +11,6 @@ export const App = () => {
     const dispatch = useAppDispatch()
 
   return (
-      <QueryClientProvider client={queryClient}>
       <div className={styles.container}>
       <header className={css({ gridArea: "header", background: "#900", display: "flex", alignItems: "center", padding: "0 20px" })}>
         <TextInputCore />
@@ -29,7 +26,6 @@ export const App = () => {
       <div className={css({ gridArea: "right", background: "#990" })}>Right</div>
       <footer className={css({ gridArea: "footer", background: "#099" })}>Footer</footer>
     </div>
-      </QueryClientProvider>
   );
 }
 

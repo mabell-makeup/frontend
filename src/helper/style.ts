@@ -1,0 +1,1 @@
+export const classNmaes = (classNameList: Array<string | undefined>) => classNameList.filter(className => className).join(" ")

@@ -11,7 +11,8 @@
     "test:ci": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "lint": "eslint"
   },
   "eslintConfig": {
     "extends": [
@@ -89,6 +90,8 @@
     "@testing-library/react": "^13.3.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "eslint": "^8.16.0",
+    "eslint-plugin-storybook": "^0.5.12",
     "react-refresh": "0.11.0",
     "webpack": "^5.71.0"
   }

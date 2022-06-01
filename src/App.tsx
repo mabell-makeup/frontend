@@ -1,25 +1,25 @@
 import User from './components/atoms/User/User'
-import { QueryClient, QueryClientProvider } from 'react-query';
 import { css } from "@emotion/css"
 import { FOOTER_HEIGHT, HEADER_HEIGHT } from "./constants/style";
 import { TextInputCore } from './components/atoms/TextInputCore/TextInputCore';
-import { css } from "@emotion/react"
 import { Button } from './components/atoms/Button/Button';
 import { decrement, increment } from './slices/counter';
 import { useAppDispatch, useAppSelector } from './helper/store';
+import { MenuNav } from './components/organisms/MenuNav/MenuNav';
 
 export const App = () => {
     const count = useAppSelector((state) => state.counter.value)
     const dispatch = useAppDispatch()
 
   return (
-      <QueryClientProvider client={queryClient}>
       <div className={styles.container}>
       <header className={css({ gridArea: "header", background: "#900", display: "flex", alignItems: "center", padding: "0 20px" })}>
         <TextInputCore />
         <h1 className={css({margin: "auto"})}>mabell</h1>
       </header>
-      <div className={css({ gridArea: "left", background: "#090" })}>Left</div>
+      <div className={css({ gridArea: "left", background: "#090", padding: "40px 20px" })}>
+        <MenuNav title="探す" menus={[{title: "色から探す"}, {title: "アイテムから探す"}, {title: "ジャンルから探す"}, {title: "ユーザーを探す"}]} />
+      </div>
       <div className={css({ gridArea: "content", background: "#009" })}>
         <User />
         <Button label="カウントアップ" onClick={() => dispatch(increment())} />
@@ -29,7 +29,6 @@ export const App = () => {
       <div className={css({ gridArea: "right", background: "#990" })}>Right</div>
       <footer className={css({ gridArea: "footer", background: "#099" })}>Footer</footer>
     </div>
-      </QueryClientProvider>
   );
 }
 

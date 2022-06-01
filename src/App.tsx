@@ -5,6 +5,7 @@ import { TextInputCore } from './components/atoms/TextInputCore/TextInputCore';
 import { Button } from './components/atoms/Button/Button';
 import { decrement, increment } from './slices/counter';
 import { useAppDispatch, useAppSelector } from './helper/store';
+import { MenuNav } from './components/organisms/MenuNav/MenuNav';
 
 export const App = () => {
     const count = useAppSelector((state) => state.counter.value)
@@ -16,7 +17,9 @@ export const App = () => {
         <TextInputCore />
         <h1 className={css({margin: "auto"})}>mabell</h1>
       </header>
-      <div className={css({ gridArea: "left", background: "#090" })}>Left</div>
+      <div className={css({ gridArea: "left", background: "#090", padding: "40px 20px" })}>
+        <MenuNav title="探す" menus={[{title: "色から探す"}, {title: "アイテムから探す"}, {title: "ジャンルから探す"}, {title: "ユーザーを探す"}]} />
+      </div>
       <div className={css({ gridArea: "content", background: "#009" })}>
         <User />
         <Button label="カウントアップ" onClick={() => dispatch(increment())} />

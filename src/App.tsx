@@ -6,6 +6,7 @@ import { decrement, increment } from './slices/counter';
 import { useAppDispatch, useAppSelector } from './helper/store';
 import { MenuNav } from './components/organisms/MenuNav/MenuNav';
 import { Header } from './components/organisms/Header/Header';
+import { Footer } from './components/organisms/Footer/Footer';
 
 export const App = () => {
     const count = useAppSelector((state) => state.counter.value)
@@ -24,7 +25,7 @@ export const App = () => {
         <h1>{count}</h1>
       </div>
       <div className={css({ gridArea: "right" })}>Right</div>
-      <footer className={css({ gridArea: "footer" })}>Footer</footer>
+      <Footer />
     </div>
   );
 }

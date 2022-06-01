@@ -7,10 +7,18 @@ import { useAppDispatch, useAppSelector } from './helper/store';
 import { MenuNav } from './components/organisms/MenuNav/MenuNav';
 import { Header } from './components/organisms/Header/Header';
 import { Footer } from './components/organisms/Footer/Footer';
+import { ImageList } from './components/organisms/ImageList/ImageList';
+import { useQueryWrapper } from './helper/reactQueryWrapper';
 
 export const App = () => {
     const count = useAppSelector((state) => state.counter.value)
     const dispatch = useAppDispatch()
+    const res = useQueryWrapper<any>('https://dog.ceo/api/breeds/image/random/15', {
+      requestOptions: { method: "GET" },
+      queryKey: 'getImages',
+      queryOptions: {staleTime: Infinity}
+    });
+  
 
   return (
     <div className={styles.container}>
@@ -19,6 +27,7 @@ export const App = () => {
         <MenuNav title="探す" menus={[{title: "色から探す"}, {title: "アイテムから探す"}, {title: "ジャンルから探す"}, {title: "ユーザーを探す"}]} />
       </div>
       <div className={css({ gridArea: "content" })}>
+        {res.data?.message && <ImageList images={res.data.message} />}
         <User />
         <Button label="カウントアップ" onClick={() => dispatch(increment())} />
         <Button label="カウントダウン" onClick={() => dispatch(decrement())} />

@@ -1,7 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
 import { App } from './App';
+import { Global } from '@emotion/react'
+import emotionReset from 'emotion-reset';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import { QueryClient, QueryClientProvider } from 'react-query';
@@ -16,6 +17,7 @@ root.render(
     <React.StrictMode>
         <QueryClientProvider client={queryClient}>
             <Provider store={store}>
+                <Global styles={emotionReset} />
                 <App />
             </Provider>
         </QueryClientProvider>

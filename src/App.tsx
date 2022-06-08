@@ -9,6 +9,7 @@ import { Header } from './components/organisms/Header/Header';
 import { Footer } from './components/organisms/Footer/Footer';
 import { ImageList } from './components/organisms/ImageList/ImageList';
 import { useQueryWrapper } from './helper/reactQueryWrapper';
+import { Headline } from './components/atoms/Headline/Headline';
 
 export const App = () => {
     const count = useAppSelector((state) => state.counter.value)
@@ -32,6 +33,7 @@ export const App = () => {
         <Button label="カウントアップ" onClick={() => dispatch(increment())} />
         <Button label="カウントダウン" onClick={() => dispatch(decrement())} />
         <h1>{count}</h1>
+        <Headline headlineText='ヘッドライン'></Headline>
       </div>
       <div className={css({ gridArea: "right" })}>Right</div>
       <Footer />

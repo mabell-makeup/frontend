@@ -1,4 +1,4 @@
-import React from "react"
+import { css } from "@emotion/css"
 
 type HeadlineProps = {
   headlineText: string
@@ -6,6 +6,14 @@ type HeadlineProps = {
 
 export const Headline: React.FC<HeadlineProps> = ({headlineText}) => {
     return (
-        <h2 style={{textDecorationLine: 'underline'}}>{headlineText}</h2>
+        <h2 className={styles.container}> {headlineText} </h2>
     )
 }
+
+const styles = {
+    container: css({
+        borderBottomColor: "#C8C8C8",
+        borderBottomWidth: "3px",
+        borderBottomStyle: "solid"
+    })
+  } 

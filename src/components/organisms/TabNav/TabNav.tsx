@@ -18,7 +18,6 @@ export const TabNav: React.FC<TabNavProps> = ({children, defaultActiveTab}) => {
             if (item.type === TabNavItem) {
                 const isActive = item.props.id === activeTab
                 const onClick = () => {
-                    console.log(item.props.id)
                     setActiveTab(item.props.id)
                     item.props.onClick?.()
                 }

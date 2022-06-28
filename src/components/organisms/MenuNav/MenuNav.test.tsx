@@ -1,7 +1,7 @@
-import { fireEvent, render, screen } from '@testing-library/react';
-import { MenuNav, MenuNavProps } from './MenuNav';
+import { fireEvent, render, screen } from "@testing-library/react"
+import { MenuNav, MenuNavProps } from "./MenuNav"
 
-describe('MenuNav', () => {
+describe("MenuNav", () => {
     const onClick1 = jest.fn()
     const onClick2 = jest.fn()
     const onClick3 = jest.fn()
@@ -11,27 +11,27 @@ describe('MenuNav', () => {
         {title: "メニュー3", onClick: onClick3},
     ]
 
-    test('メニュータイトルが表示されている', () => {
+    test("メニュータイトルが表示されている", () => {
         render(<MenuNav title="タイトル" menus={testMenus} />)
 
         const title = screen.getByText("タイトル")
         expect(title).toBeInTheDocument()
     })
 
-    test('メニューが表示される', () => {
+    test("メニューが表示される", () => {
         render(<MenuNav menus={testMenus} />)
 
         testMenus.forEach(({title}) => {
-            const menu = screen.getByText(title);
-            expect(menu).toBeInTheDocument();
+            const menu = screen.getByText(title)
+            expect(menu).toBeInTheDocument()
         })
     })
 
-    test('onClickが動作する', () => {
+    test("onClickが動作する", () => {
         render(<MenuNav menus={testMenus} />)
 
         testMenus.forEach(({title, onClick}) => {
-            const menu = screen.getByText(title);
+            const menu = screen.getByText(title)
             fireEvent.click(menu)
             // @ts-ignore
             expect(onClick.mock.calls.length).toBe(1)

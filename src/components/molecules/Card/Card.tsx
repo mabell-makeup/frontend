@@ -6,15 +6,15 @@ type CardProps = {
 }
 
 export const Card = ({src, alt}: CardProps) => {
-  return (
-    <img src={src} alt={alt} className={styles.container} />
-  )
+    return (
+        <img src={src} alt={alt} className={styles.container} />
+    )
 }
 
 const styles = {
-  container: css({
-    height: 200,
-    width: 200,
-    objectFit: "cover"
-  })
+    container: css({
+        height: 200,
+        width: 200,
+        objectFit: "cover"
+    })
 }

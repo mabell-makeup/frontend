@@ -31,6 +31,9 @@ describe("TabNav", () => {
             </TabNav>
         )
         const targetElement = screen.getByText(items[2].label)
+
+        expect(targetElement).not.toHaveStyle("border-bottom: 7px solid #C4C4C4")
+
         fireEvent.click(targetElement)
 
         expect(targetElement).toHaveStyle("border-bottom: 7px solid #C4C4C4")

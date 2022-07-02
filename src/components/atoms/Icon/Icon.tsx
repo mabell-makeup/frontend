@@ -1,4 +1,4 @@
-import * as icons from "react-icons/ai"
+import * as icons from "react-icons/bs"
 import {IconBaseProps} from "react-icons"
 
 type IconProps = IconBaseProps & {
@@ -7,7 +7,7 @@ type IconProps = IconBaseProps & {
 
 /**
  * アイコンはここから探すことができます。
- * https://react-icons.github.io/react-icons/icons?name=ai
+ * https://react-icons.github.io/react-icons/icons?name=bs
  */
 export const Icon: React.FC<IconProps> = ({name, ...props}) => {
   const IconCore = icons[name]

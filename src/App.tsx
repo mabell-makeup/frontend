@@ -9,6 +9,7 @@ import { Header } from './components/organisms/Header/Header';
 import { Footer } from './components/organisms/Footer/Footer';
 import { ImageList } from './components/organisms/ImageList/ImageList';
 import { useQueryWrapper } from './helper/reactQueryWrapper';
+import { Icon } from './components/atoms/Icon/Icon';
 
 export const App = () => {
     const count = useAppSelector((state) => state.counter.value)
@@ -25,6 +26,7 @@ export const App = () => {
       <Header />
       <div className={css({ gridArea: "left", padding: "40px 20px" })}>
         <MenuNav title="探す" menus={[{title: "色から探す"}, {title: "アイテムから探す"}, {title: "ジャンルから探す"}, {title: "ユーザーを探す"}]} />
+        <Icon name="AiFillCar" color="#900" size={100} />
       </div>
       <div className={css({ gridArea: "content" })}>
         {res.data?.message && <ImageList images={res.data.message} />}

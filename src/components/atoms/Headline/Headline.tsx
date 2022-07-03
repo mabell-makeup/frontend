@@ -8,6 +8,6 @@ export function Headline(props: { children: string }) {
 
 const styles = {
     container: css({
-        borderBottom: "100% solid #C8C8C8"
+        borderBottom: "solid #C8C8C8"
     })
 } 

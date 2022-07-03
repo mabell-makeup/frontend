@@ -3,7 +3,7 @@ import { Headline } from './Headline';
 
 describe('Headline', () => {
     test('ラベルが表示されている', () => {
-        render(<Headline headlineText="見出し"/>);
+        render(<Headline>見出し</Headline>);
 
         const linkElement = screen.getByText("見出し");
         expect(linkElement).toBeInTheDocument();

@@ -1,12 +1,8 @@
 import { css } from "@emotion/css"
 
-type HeadlineProps = {
-    headlineText: string
-}
-
-export const Headline: React.FC<HeadlineProps> = ({ headlineText }) => {
+export function Headline(props: { children: string }) {
     return (
-        <h2 className={styles.container}> {headlineText} </h2>
+        <h2 className={styles.container}>{props.children}</h2>
     )
 }
 

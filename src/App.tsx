@@ -25,9 +25,8 @@ export const App = () => {
     <div className={styles.container}>
       <Header />
       <div className={css({ gridArea: "left", padding: "40px 20px" })}>
-        <Headline headlineText='Headline'></Headline>
+        <Headline>aaaaaaa</Headline>
         <MenuNav title="探す" menus={[{title: "色から探す"}, {title: "アイテムから探す"}, {title: "ジャンルから探す"}, {title: "ユーザーを探す"}]} />
-        <Headline headlineText='ゲロマブいHeadlineの文字数テスト(折り返す模様)'></Headline>
       </div>
       <div className={css({ gridArea: "content" })}>
         {res.data?.message && <ImageList images={res.data.message} />}

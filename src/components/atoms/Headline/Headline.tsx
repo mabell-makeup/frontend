@@ -8,6 +8,7 @@ export function Headline(props: { children: string }) {
 
 const styles = {
     container: css({
+        width: "100%",
         borderBottom: "solid #C8C8C8"
     })
 } 

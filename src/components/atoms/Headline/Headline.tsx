@@ -1,7 +1,7 @@
 import { css } from "@emotion/css"
 
 type HeadlineProps = {
-  headlineText: string
+    headlineText: string
 }
 
 export const Headline: React.FC<HeadlineProps> = ({headlineText}) => {
@@ -12,8 +12,6 @@ export const Headline: React.FC<HeadlineProps> = ({headlineText}) => {
 
 const styles = {
     container: css({
-        borderBottomColor: "#C8C8C8",
-        borderBottomWidth: "3px",
-        borderBottomStyle: "solid"
+        borderBottom: "100% solid #C8C8C8"
     })
   } 

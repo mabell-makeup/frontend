@@ -7,6 +7,8 @@ import { useAppDispatch, useAppSelector } from './helper/store';
 import { MenuNav } from './components/organisms/MenuNav/MenuNav';
 import { Header } from './components/organisms/Header/Header';
 import { Footer } from './components/organisms/Footer/Footer';
+import { TabNav } from './components/organisms/TabNav/TabNav';
+import { TabNavItem } from './components/organisms/TabNavItem/TabNavItem';
 import { ImageList } from './components/organisms/ImageList/ImageList';
 import { useQueryWrapper } from './helper/reactQueryWrapper';
 
@@ -27,6 +29,12 @@ export const App = () => {
         <MenuNav title="探す" menus={[{title: "色から探す"}, {title: "アイテムから探す"}, {title: "ジャンルから探す"}, {title: "ユーザーを探す"}]} />
       </div>
       <div className={css({ gridArea: "content" })}>
+        <TabNav defaultActiveTab="top">
+          <TabNavItem id="top">TOP</TabNavItem>
+          <TabNavItem id="time-line">タイムライン</TabNavItem>
+          <TabNavItem id="search">さがす</TabNavItem>
+          <TabNavItem id="my-clip">マイクリップ</TabNavItem>
+        </TabNav>
         {res.data?.message && <ImageList images={res.data.message} />}
         <User />
         <Button label="カウントアップ" onClick={() => dispatch(increment())} />

@@ -1,5 +1,5 @@
 import { css } from "@emotion/css"
-import { Card } from "../../molecules/Card/Card"
+import { PostCard } from "../PostCard/PostCard"
 
 type ImageListProps = {
   images: Array<string>
@@ -8,7 +8,7 @@ type ImageListProps = {
 export const ImageList = ({images}: ImageListProps) => {
   return (
     <div className={styles.container}>
-      {images.map((image, index) => <Card key={index} src={image} />)}
+      {images.map((image, index) => <PostCard key={index} src={image} />)}
     </div>
   )
 }
@@ -16,8 +16,9 @@ export const ImageList = ({images}: ImageListProps) => {
 const styles = {
   container: css({
     display: "grid",
-    gridAutoRows: "200px",
-    gridTemplateColumns: "repeat(auto-fill, 200px)",
-    gap: 10,
+    gridAutoRows: "250px",
+    gridTemplateColumns: "repeat(auto-fill, 300px)",
+    columnGap: 20,
+    rowGap: 30,
   })
 }

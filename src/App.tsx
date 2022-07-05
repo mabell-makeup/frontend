@@ -26,11 +26,11 @@ export const App = () => {
   return (
     <div className={styles.container}>
       <Header />
-      <div className={css({ gridArea: "left", padding: "40px 20px" })}>
+      <div className={css({ gridArea: "left", padding: "40px 20px", background: "#EEE" })}>
         <MenuNav title="探す" menus={[{title: "色から探す"}, {title: "アイテムから探す"}, {title: "ジャンルから探す"}, {title: "ユーザーを探す"}]} />
-        <Icon name="AiFillCar" color="#900" size={100} />
+        <Icon name="BsCart" color="#900" size={100} />
       </div>
-      <div className={css({ gridArea: "content" })}>
+      <div className={css({ gridArea: "content", background: "#EEE" })}>
         <TabNav defaultActiveTab="top">
           <TabNavItem id="top">TOP</TabNavItem>
           <TabNavItem id="time-line">タイムライン</TabNavItem>
@@ -43,7 +43,7 @@ export const App = () => {
         <Button label="カウントダウン" onClick={() => dispatch(decrement())} />
         <h1>{count}</h1>
       </div>
-      <div className={css({ gridArea: "right" })}>Right</div>
+      <div className={css({ gridArea: "right", background: "#EEE" })}>Right</div>
       <Footer />
     </div>
   );

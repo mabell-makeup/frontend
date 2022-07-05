@@ -7,6 +7,8 @@ import { useAppDispatch, useAppSelector } from './helper/store';
 import { MenuNav } from './components/organisms/MenuNav/MenuNav';
 import { Header } from './components/organisms/Header/Header';
 import { Footer } from './components/organisms/Footer/Footer';
+import { TabNav } from './components/organisms/TabNav/TabNav';
+import { TabNavItem } from './components/organisms/TabNavItem/TabNavItem';
 import { ImageList } from './components/organisms/ImageList/ImageList';
 import { useQueryWrapper } from './helper/reactQueryWrapper';
 import { Icon } from './components/atoms/Icon/Icon';
@@ -29,6 +31,12 @@ export const App = () => {
         <Icon name="BsCart" color="#900" size={100} />
       </div>
       <div className={css({ gridArea: "content", background: "#EEE" })}>
+        <TabNav defaultActiveTab="top">
+          <TabNavItem id="top">TOP</TabNavItem>
+          <TabNavItem id="time-line">タイムライン</TabNavItem>
+          <TabNavItem id="search">さがす</TabNavItem>
+          <TabNavItem id="my-clip">マイクリップ</TabNavItem>
+        </TabNav>
         {res.data?.message && <ImageList images={res.data.message} />}
         <User />
         <Button label="カウントアップ" onClick={() => dispatch(increment())} />

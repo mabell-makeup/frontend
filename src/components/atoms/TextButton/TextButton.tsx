@@ -1,12 +1,20 @@
+import { css } from "@emotion/css"
 import React from "react"
 
-type ButtonProps = {
-  label: string
-  onClick?: () => void
+type TextButtonProps = {
+    label: string
+    onClick?: () => void
 }
 
-export const TextButton: React.FC<ButtonProps> = ({label, onClick}) => {
+export const TextButton: React.FC<TextButtonProps> = ({ label, onClick }) => {
     return (
-        <p onClick={onClick}>{label}</p>
+        <button onClick={onClick} className={styles.container} >{label}</button>
     )
 }
+
+const styles = {
+    container: css({
+        background: "transparent",
+        border: "none"
+    })
+} 

@@ -1,14 +1,17 @@
 import { css } from "@emotion/css"
 
-export function Headline(props: { children: string }) {
+type HeadlineProps = {
+    children?: React.ReactNode
+}
+export const Headline: React.FC<HeadlineProps> = ({ children }) => {
     return (
-        <h2 className={styles.container}>{props.children}</h2>
+        <h2 className={styles.container}>{children}</h2>
     )
 }
 
 const styles = {
     container: css({
-        width: "100%",
-        borderBottom: "solid #C8C8C8"
+        borderBottom: "1px solid #C8C8C8",
+        width: "100%"
     })
 } 

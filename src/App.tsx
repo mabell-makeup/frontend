@@ -7,9 +7,12 @@ import { useAppDispatch, useAppSelector } from './helper/store';
 import { MenuNav } from './components/organisms/MenuNav/MenuNav';
 import { Header } from './components/organisms/Header/Header';
 import { Footer } from './components/organisms/Footer/Footer';
+import { TabNav } from './components/organisms/TabNav/TabNav';
+import { TabNavItem } from './components/organisms/TabNavItem/TabNavItem';
 import { ImageList } from './components/organisms/ImageList/ImageList';
 import { useQueryWrapper } from './helper/reactQueryWrapper';
 import { Headline } from './components/atoms/Headline/Headline';
+import { Icon } from './components/atoms/Icon/Icon';
 
 export const App = () => {
     const count = useAppSelector((state) => state.counter.value)
@@ -24,18 +27,24 @@ export const App = () => {
   return (
     <div className={styles.container}>
       <Header />
-      <div className={css({ gridArea: "left", padding: "40px 20px" })}>
-        <Headline>aaaaaaa</Headline>
+      <div className={css({ gridArea: "left", padding: "40px 20px", background: "#EEE" })}>
         <MenuNav title="探す" menus={[{title: "色から探す"}, {title: "アイテムから探す"}, {title: "ジャンルから探す"}, {title: "ユーザーを探す"}]} />
+        <Icon name="BsCart" color="#900" size={100} />
       </div>
-      <div className={css({ gridArea: "content" })}>
+      <div className={css({ gridArea: "content", background: "#EEE" })}>
+        <TabNav defaultActiveTab="top">
+          <TabNavItem id="top">TOP</TabNavItem>
+          <TabNavItem id="time-line">タイムライン</TabNavItem>
+          <TabNavItem id="search">さがす</TabNavItem>
+          <TabNavItem id="my-clip">マイクリップ</TabNavItem>
+        </TabNav>
         {res.data?.message && <ImageList images={res.data.message} />}
         <User />
         <Button label="カウントアップ" onClick={() => dispatch(increment())} />
         <Button label="カウントダウン" onClick={() => dispatch(decrement())} />
         <h1>{count}</h1>
       </div>
-      <div className={css({ gridArea: "right" })}>Right</div>
+      <div className={css({ gridArea: "right", background: "#EEE" })}>Right</div>
       <Footer />
     </div>
   );

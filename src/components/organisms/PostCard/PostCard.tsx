@@ -14,7 +14,7 @@ export const PostCard: React.FC<PostCardProps> = (props) => {
         <Card {...props}>
             <div className={styles.cardFooter}>
                 <div className={styles.left}>
-                    <Avatar alt={props.alt} />
+                    <Avatar src={props.src} alt={props.alt} />
                     <span>user_name</span>
                     <span>イエベ春</span>
                 </div>

@@ -2,6 +2,7 @@ import User from './components/atoms/User/User'
 import { css } from "@emotion/css"
 import { FOOTER_HEIGHT, HEADER_HEIGHT } from "./constants/style";
 import { Button } from './components/atoms/Button/Button';
+import { TextButton } from './components/atoms/TextButton/TextButton';
 import { decrement, increment } from './slices/counter';
 import { useAppDispatch, useAppSelector } from './helper/store';
 import { MenuNav } from './components/organisms/MenuNav/MenuNav';
@@ -42,6 +43,8 @@ export const App = () => {
         <User />
         <Button label="カウントアップ" onClick={() => dispatch(increment())} />
         <Button label="カウントダウン" onClick={() => dispatch(decrement())} />
+        <TextButton label="カウントアップ2" onClick={() => dispatch(increment())} />
+        <TextButton label="カウントダウン2" onClick={() => dispatch(decrement())} />
         <h1>{count}</h1>
       </div>
       <div className={css({ gridArea: "right", background: "#EEE" })}>Right</div>

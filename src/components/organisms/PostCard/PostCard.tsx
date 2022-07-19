@@ -1,4 +1,5 @@
 import { css } from "@emotion/css";
+import { Avatar } from "../../atoms/Avatar/Avatar";
 import { Icon } from "../../atoms/Icon/Icon";
 import { Card, CardProps } from "../../molecules/Card/Card"
 
@@ -13,7 +14,7 @@ export const PostCard: React.FC<PostCardProps> = (props) => {
         <Card {...props}>
             <div className={styles.cardFooter}>
                 <div className={styles.left}>
-                    <Icon name="BsCircleFill" color="#C4C4C4" />
+                    <Avatar alt={props.alt} />
                     <span>user_name</span>
                     <span>イエベ春</span>
                 </div>

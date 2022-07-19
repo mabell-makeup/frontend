@@ -11,6 +11,7 @@ import { TabNav } from './components/organisms/TabNav/TabNav';
 import { TabNavItem } from './components/organisms/TabNavItem/TabNavItem';
 import { ImageList } from './components/organisms/ImageList/ImageList';
 import { useQueryWrapper } from './helper/reactQueryWrapper';
+import { Headline } from './components/atoms/Headline/Headline';
 import { Icon } from './components/atoms/Icon/Icon';
 
 export const App = () => {

@@ -11,7 +11,9 @@ export const Headline: React.FC<HeadlineProps> = ({ children }) => {
 
 const styles = {
     container: css({
-        borderBottom: "1px solid #C8C8C8",
-        width: "100%"
+        borderBottom: "2px solid #C8C8C8",
+        paddingBottom: 6,
+        width: "100%",
+        fontSize: 22,
     })
 } 

@@ -35,7 +35,7 @@ export const TabNav: React.FC<TabNavProps> = ({children, defaultActiveTab, class
 const styles = {
     container: css({
         display: "flex",
-        gap: 30,
+        gap: 50,
         justifyContent: "center",
         padding: "10px 0"
     }),

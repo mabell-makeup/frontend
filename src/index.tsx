@@ -1,5 +1,5 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import { render } from 'react-dom';
 import { App } from './App';
 import { Global } from '@emotion/react'
 import emotionReset from 'emotion-reset';
@@ -12,8 +12,7 @@ import { store } from './store'
 const queryClient = new QueryClient();
 
 const container = document.getElementById('root');
-const root = createRoot(container!);
-root.render(
+render(
     <React.StrictMode>
         <QueryClientProvider client={queryClient}>
             <Provider store={store}>
@@ -22,6 +21,7 @@ root.render(
             </Provider>
         </QueryClientProvider>
     </React.StrictMode>
+    , container
 );
 
 // If you want your app to work offline and load faster, you can change

@@ -1,4 +1,3 @@
-import React from 'react';
 import { TextButton } from './TextButton';
 import { render, screen } from '@testing-library/react';
 

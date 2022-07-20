@@ -53,7 +53,7 @@ const styles = {
             "left           main           right"
         `,
         gridTemplateColumns: "236px 1fr 236px",
-        padding: "20px 0"
+        padding: "20px 0 120px 0"
     }),
     header: css({
         gridArea: "content-header",

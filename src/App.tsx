@@ -41,8 +41,8 @@ export const App = () => {
         </TabNav>
         {res.data?.message && <ImageList images={res.data.message} />}
         <User />
-        <Button label="カウントアップ" onClick={() => dispatch(increment())} />
-        <Button label="カウントダウン" onClick={() => dispatch(decrement())} />
+        <Button onClick={() => dispatch(increment())}>カウントアップ</Button>
+        <Button onClick={() => dispatch(decrement())}>カウントダウン</Button>
         <TextButton label="カウントアップ2" onClick={() => dispatch(increment())} />
         <TextButton label="カウントダウン2" onClick={() => dispatch(decrement())} />
         <h1>{count}</h1>

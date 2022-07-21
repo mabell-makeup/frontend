@@ -28,7 +28,7 @@ const createStyles = (isActive?: boolean) => ({
     container: css({
         padding: "4px",
         fontSize: 24,
-        borderBottom: isActive ? "7px solid #C4C4C4" : undefined,
+        borderBottom: isActive ? "3px solid #C4C4C4" : undefined,
         color: isActive ? "#000000" : "#444444",
         cursor: "pointer",
         ":hover": {

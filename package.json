@@ -9,6 +9,7 @@
     "test:snapshot": "react-scripts test --watchAll=false src/storyshots.test.js",
     "test:unit": "react-scripts test --watchAll=false src/components",
     "test:ci": "react-scripts test --watchAll=false",
+    "snapshot-approve": "react-scripts test --watchAll=false src/storyshots.test.js -u",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"

@@ -4,17 +4,22 @@ import { TextButton } from "./components/atoms/TextButton/TextButton"
 import { Login } from "./components/pages/Login"
 import { Top } from "./components/pages/Top"
 import { AppLayout } from "./components/templates/AppLayout/AppLayout"
+import { PublicRoutesLayout } from "./components/templates/PublicRoutesLayout/PublicRoutesLayout"
 import { useAppSelector } from "./helper/store"
 
 export const Routes = () => {
     const {loggedIn} = useAppSelector(({auth: {loggedIn}}) => ({loggedIn}))
     return (
         <ReactRouterRoutes>
+            {/* PublicRoutes */}
             <Route path="*" element={<NotFound />} />
-            <Route path="/login" element={<Login />} />
+            <Route element={<PublicRoutesLayout><Outlet /></PublicRoutesLayout>}>
+                <Route path="/login" element={<Login />} />
+            </Route>
+            {/* PrivateRoutes */}
             {loggedIn && (
-                <Route path="/" element={<AppLayout><Outlet /></AppLayout>}>
-                    <Route path="" element={<Top />} />
+                <Route element={<AppLayout><Outlet /></AppLayout>}>
+                    <Route path="/" element={<Top />} />
                 </Route>
             )}
         </ReactRouterRoutes>

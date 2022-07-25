@@ -19,8 +19,8 @@ export const PostCard: React.FC<PostCardProps> = (props) => {
                     <span>イエベ春</span>
                 </div>
                 <div className={styles.right}>
-                    <Icon name="BsHeart" color="#C4C4C4" />
-                    <Icon name="BsBookmarkFill" color="#C4C4C4" />
+                    <Icon name="FiHeart" color="#C4C4C4" />
+                    <Icon name="MdBookmark" color="#C4C4C4" />
                 </div>
             </div>
         </Card>

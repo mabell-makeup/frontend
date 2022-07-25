@@ -1,10 +1,10 @@
-import { Top } from "./components/pages/Top";
-import { AppLayout } from "./components/templates/AppLayout/AppLayout";
+import { BrowserRouter } from "react-router-dom"
+import { Routes } from "./routes";
 
 export const App = () => {
     return (
-        <AppLayout>
-            <Top />
-        </AppLayout>
+        <BrowserRouter>
+            <Routes />
+        </BrowserRouter>
     );
 }

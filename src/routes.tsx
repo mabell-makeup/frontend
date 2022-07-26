@@ -2,6 +2,7 @@ import { css } from "@emotion/css"
 import {Routes as ReactRouterRoutes, Route, Outlet, Link} from "react-router-dom"
 import { TextButton } from "./components/atoms/TextButton/TextButton"
 import { Login } from "./components/pages/Login"
+import { Signup } from "./components/pages/Signup"
 import { Top } from "./components/pages/Top"
 import { AppLayout } from "./components/templates/AppLayout/AppLayout"
 import { PublicRoutesLayout } from "./components/templates/PublicRoutesLayout/PublicRoutesLayout"
@@ -15,6 +16,7 @@ export const Routes = () => {
             <Route path="*" element={<NotFound />} />
             <Route element={<PublicRoutesLayout><Outlet /></PublicRoutesLayout>}>
                 <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
             </Route>
             {/* PrivateRoutes */}
             {loggedIn && (

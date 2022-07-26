@@ -13,9 +13,10 @@ export const TextInputCore = ({className, ...props}: TextINputCoreProps) => {
 
 const styles = {
   container: css({
-    height: 20,
+    height: 40,
     padding: 10,
     width: "100%",
-    maxWidth: 200
+    maxWidth: 200,
+    boxSizing: "border-box",
   })
 }

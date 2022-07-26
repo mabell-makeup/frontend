@@ -1,10 +1,14 @@
 import { css } from "@emotion/css"
+import { classNames } from "../../../helper/style"
 import { SiteMap } from "../SiteMap/SiteMap"
 
+type FooterProps = {
+    className?: string
+}
 
-export const Footer = () => {
+export const Footer: React.FC<FooterProps> = ({className}) => {
     return (
-        <footer className={styles.container}>
+        <footer className={classNames([styles.container, className])}>
             <div className={styles.content}>
                 <SiteMap />
             </div>

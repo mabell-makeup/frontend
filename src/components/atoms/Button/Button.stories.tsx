@@ -14,4 +14,12 @@ export const Primary = Template.bind({})
 
 Primary.args = {
     children: "ボタン",
+    variant: "primary",
+}
+
+export const Text = Template.bind({})
+
+Text.args = {
+    children: "ボタン",
+    variant: "text",
 }

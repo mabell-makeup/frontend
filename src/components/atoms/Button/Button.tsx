@@ -1,13 +1,17 @@
 import React from "react"
+import { ButtonCoreProps } from "./ButtonCore"
+import { PrimaryButton } from "./PrimaryButton"
+import { TextButton } from "./TextButton"
 
-type ButtonProps = {
-  children?: React.ReactNode
-  onClick?: () => void
-  className?: string
+export type ButtonProps = ButtonCoreProps & {
+  variant?: "primary" | "secondary" | "text"
 }
 
-export const Button: React.FC<ButtonProps> = ({children, onClick, className}) => {
-    return (
-        <button onClick={onClick} className={className}>{children}</button>
-    )
+export const Button: React.FC<ButtonProps> = (props) => {
+    switch (props.variant) {
+        case "text":
+            return <TextButton {...props} />
+        default:
+            return <PrimaryButton {...props} />
+    }
 }

@@ -1,6 +1,6 @@
 import { css } from "@emotion/css"
 import { classNames } from "../../../helper/style"
-import { TextButton } from "../../atoms/TextButton/TextButton"
+import { Button } from "../../atoms/Button/Button"
 import { TextInputCore } from "../../atoms/TextInputCore/TextInputCore"
 
 type HeaderProps = {
@@ -17,8 +17,8 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
                 <h1 className={styles.title}>mabell</h1>
             </div>
             <div className={styles.right}>
-                <TextButton>ログイン</TextButton>
-                <TextButton>新規会員登録</TextButton>
+                <Button variant="text">ログイン</Button>
+                <Button variant="text">新規会員登録</Button>
             </div>
         </header>
     )

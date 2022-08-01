@@ -1,6 +1,6 @@
 import { css } from "@emotion/css"
 import {Routes as ReactRouterRoutes, Route, Outlet, Link} from "react-router-dom"
-import { TextButton } from "./components/atoms/TextButton/TextButton"
+import { Button } from "./components/atoms/Button/Button"
 import { Login } from "./components/pages/Login"
 import { Signup } from "./components/pages/Signup"
 import { Top } from "./components/pages/Top"
@@ -33,7 +33,7 @@ const NotFound = () => {
         <div className={styles.notFound}>
             <h1>Oops!! Page not found!</h1>
             <Link to="/login">
-                <TextButton>ログインする</TextButton>
+                <Button variant="text">ログインする</Button>
             </Link>
         </div>
     )

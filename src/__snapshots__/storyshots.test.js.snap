@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots atoms/Button Primary 1`] = `
+<button
+  className="css-1vuidc"
+>
+  ボタン
+</button>
+`;
+
+exports[`Storyshots atoms/Button Text 1`] = `
+<button
+  className="css-nmuous"
+>
+  ボタン
+</button>
+`;
+
 exports[`Storyshots atoms/Icon Dafult 1`] = `
 <div
   className="css-nk32ej"
@@ -38,6 +54,7 @@ exports[`Storyshots atoms/Overlay Dafult 1`] = `
   className="css-nk32ej"
 >
   <button
+    className="css-1vuidc"
     onClick={[Function]}
   >
     オーバーレイを表示する
@@ -72,6 +89,7 @@ exports[`Storyshots atoms/Overlay Dafult 1`] = `
         オーバーレイ表示中はスクロールができません。
       </h1>
       <button
+        className="css-1vuidc"
         onClick={[Function]}
       >
         閉じる

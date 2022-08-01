@@ -14,6 +14,9 @@ export const PrimaryButton: React.FC<ButtonCoreProps> = ({className, ...props}) 
 
 const styles = {
     primary: css({
-        
+        border: "1px solid #000000",
+        padding: "10px 20px",
+        boxSizing: "border-box",
+        background: "transparent",
     })
 }

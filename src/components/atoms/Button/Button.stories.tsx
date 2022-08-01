@@ -15,6 +15,7 @@ export const Primary = Template.bind({})
 Primary.args = {
     children: "ボタン",
     variant: "primary",
+    startIcon: "FiChevronLeft"
 }
 
 export const Text = Template.bind({})
@@ -22,4 +23,5 @@ export const Text = Template.bind({})
 Text.args = {
     children: "ボタン",
     variant: "text",
+    endIcon: "FiChevronRight"
 }

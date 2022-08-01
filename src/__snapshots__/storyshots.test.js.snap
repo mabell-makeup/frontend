@@ -2,17 +2,57 @@
 
 exports[`Storyshots atoms/Button Primary 1`] = `
 <button
-  className="css-1vuidc"
+  className="css-171onha css-1vuidc"
 >
+  <svg
+    fill="none"
+    height="1em"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+    viewBox="0 0 24 24"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <polyline
+      points="15 18 9 12 15 6"
+    />
+  </svg>
   ボタン
 </button>
 `;
 
 exports[`Storyshots atoms/Button Text 1`] = `
 <button
-  className="css-nmuous"
+  className="css-171onha css-nmuous"
 >
   ボタン
+  <svg
+    fill="none"
+    height="1em"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+    viewBox="0 0 24 24"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <polyline
+      points="9 18 15 12 9 6"
+    />
+  </svg>
 </button>
 `;
 
@@ -54,7 +94,7 @@ exports[`Storyshots atoms/Overlay Dafult 1`] = `
   className="css-nk32ej"
 >
   <button
-    className="css-1vuidc"
+    className="css-171onha css-1vuidc"
     onClick={[Function]}
   >
     オーバーレイを表示する
@@ -89,7 +129,7 @@ exports[`Storyshots atoms/Overlay Dafult 1`] = `
         オーバーレイ表示中はスクロールができません。
       </h1>
       <button
-        className="css-1vuidc"
+        className="css-171onha css-1vuidc"
         onClick={[Function]}
       >
         閉じる

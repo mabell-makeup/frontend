@@ -1,24 +1,12 @@
-import { css } from "@emotion/css"
-import { Label } from "../../atoms/Label/Label"
 import { TextInputCore } from "../../atoms/TextInputCore/TextInputCore"
+import { InputContainer, InputContainerProps } from "../InputContainer/InputContainer"
 
-type TextInputProps = {
-    label?: string
-}
+type TextInputProps = InputContainerProps
 
 export const TextInput: React.FC<TextInputProps> = ({label}) => {
     return (
-        <div className={styles.container}>
-            <Label>{label}</Label>
-            <TextInputCore />
-        </div>
+            <InputContainer label={label}>
+                <TextInputCore />
+            </InputContainer>
     )
-}
-
-const styles = {
-    container: css({
-        display: "flex",
-        flexFlow: "column",
-        gap: 4,
-    })
 }

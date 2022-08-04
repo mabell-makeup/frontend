@@ -1,14 +1,14 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Select } from './Select';
+import { SelectCore } from './SelectCore';
 
 export default {
-    title: 'atoms/Select',
-    component: Select,
-} as ComponentMeta<typeof Select>;
+    title: 'atoms/SelectCore',
+    component: SelectCore,
+} as ComponentMeta<typeof SelectCore>;
 
-const Template: ComponentStory<typeof Select> = (args) => {
+const Template: ComponentStory<typeof SelectCore> = (args) => {
     return (
-        <Select {...args} />
+        <SelectCore {...args} />
     )
 }
 

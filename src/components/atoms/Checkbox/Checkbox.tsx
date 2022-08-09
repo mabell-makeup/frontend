@@ -1,16 +1,18 @@
 import { css } from "@emotion/css"
 import { useState } from "react"
+import { classNames } from "../../../helper/style"
 import { Icon } from "../Icon/Icon"
 
 type CheckboxProps = {
     children?: React.ReactNode
+    className?: string
 }
 
-export const Checkbox: React.FC<CheckboxProps> = ({children}) => {
+export const Checkbox: React.FC<CheckboxProps> = ({children, className}) => {
     const [isChecked, setIsChecked] = useState(false)
 
     return (
-        <div className={styles.container} onClick={() => setIsChecked(!isChecked)}>
+        <div className={classNames([styles.container, className])} onClick={() => setIsChecked(!isChecked)}>
             <input type="checkbox" value={isChecked.toString()} className={styles.hidden} />
             {isChecked
                 ? <Icon name="MdCheckCircle" color="#A154F2" size={18} />

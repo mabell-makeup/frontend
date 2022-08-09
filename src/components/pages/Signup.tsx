@@ -6,11 +6,12 @@ import { useNavigate } from "react-router-dom"
 export const Signup = () => {
     const navigate = useNavigate()
     const onSignup = () => {
-        navigate("/login")
+        navigate("/edit")
     }
     return (
         <div className={styles.container}>
             <h1 className={styles.title}>新規登録</h1>
+            {/* TODO: SocialSignupFormコンポーネントとして切り出す */}
             <div className={styles.socialSignupForm}>
                 <h2 className={css({fontWeight: "bold"})}>外部アカウントで登録</h2>
                 <div className={css({display: "grid"})}>
@@ -18,6 +19,7 @@ export const Signup = () => {
                     <Button>Facebookで続ける</Button>
                 </div>
             </div>
+            {/* TODO: MailSignupFormコンポーネントとして切り出す */}
             <div className={styles.mailSignupForm}>
                 <h2 className={css({fontWeight: "bold"})}>メールアドレスで登録</h2>
                 <TextInputCore className={styles.input} placeholder="例) 芽井 鐘" />

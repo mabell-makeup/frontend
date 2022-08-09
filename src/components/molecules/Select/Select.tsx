@@ -1,5 +1,5 @@
-import { InputContainer, InputContainerProps } from "../../molecules/InputContainer/InputContainer"
-import { SelectCore, SelectCoreProps } from "../SelectCore/SelectCore"
+import { InputContainer, InputContainerProps } from "../InputContainer/InputContainer"
+import { SelectCore, SelectCoreProps } from "../../atoms/SelectCore/SelectCore"
 
 type SelectProps = InputContainerProps & SelectCoreProps
 

@@ -20,14 +20,8 @@ export const Header: React.FC<HeaderProps> = ({ loggedIn=false, className }) => 
                 <h1 className={styles.title}>mabell</h1>
             </div>
             <div className={styles.right}>
-                {loggedIn
-                    ? <Button variant="text" onClick={() => navigate("/mypage")}>マイページ</Button>
-                    : (
-                        <>
-                            <Button variant="text">ログイン</Button>
-                            <Button variant="text">新規会員登録</Button>
-                        </>
-                    )}
+                {loggedIn ? <Button variant="text" onClick={() => navigate("/mypage")}>マイページ</Button> : <Button variant="text">ログイン</Button>}
+                {loggedIn ? <Button variant="text" onClick={() => navigate("/login")}>ログアウト</Button> : <Button variant="text">新規会員登録</Button>}
             </div>
         </header>
     )

@@ -2,15 +2,17 @@ import { css } from "@emotion/css"
 import { FOOTER_HEIGHT, HEADER_HEIGHT } from "../../../constants/style";
 import { Header } from '../../organisms/Header/Header';
 import { Footer } from '../../organisms/Footer/Footer';
+import { useAppSelector } from "../../../helper/store";
 
 type AppLayoutProps = {
     children?: React.ReactNode
 }
 
 export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
+    const {loggedIn} = useAppSelector(({auth: {loggedIn}}) => ({loggedIn}))
     return (
         <div className={styles.container}>
-            <Header className={styles.header} />
+            <Header className={styles.header} loggedIn={loggedIn} />
             <div className={styles.content}>
                 {children}
             </div>

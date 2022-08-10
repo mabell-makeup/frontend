@@ -1,13 +1,16 @@
 import { css } from "@emotion/css"
+import { useNavigate } from "react-router-dom"
 import { classNames } from "../../../helper/style"
 import { Button } from "../../atoms/Button/Button"
 import { TextInputCore } from "../../atoms/TextInputCore/TextInputCore"
 
 type HeaderProps = {
+    loggedIn?: boolean
     className?: string
 }
 
-export const Header: React.FC<HeaderProps> = ({ className }) => {
+export const Header: React.FC<HeaderProps> = ({ loggedIn=false, className }) => {
+    const navigate = useNavigate()
     return (
         <header className={classNames([styles.container, className])}>
             <div className={styles.left}>
@@ -17,8 +20,14 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
                 <h1 className={styles.title}>mabell</h1>
             </div>
             <div className={styles.right}>
-                <Button variant="text">ログイン</Button>
-                <Button variant="text">新規会員登録</Button>
+                {loggedIn
+                    ? <Button variant="text" onClick={() => navigate("/mypage")}>マイページ</Button>
+                    : (
+                        <>
+                            <Button variant="text">ログイン</Button>
+                            <Button variant="text">新規会員登録</Button>
+                        </>
+                    )}
             </div>
         </header>
     )

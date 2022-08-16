@@ -7,9 +7,10 @@ export type TabNavProps = {
     children?: React.ReactNode,
     defaultActiveTab?: string,
     className?: string,
+    onChange?: (activeTab: string) => void
 }
 
-export const TabNav: React.FC<TabNavProps> = ({children, defaultActiveTab, className}) => {
+export const TabNav: React.FC<TabNavProps> = ({children, defaultActiveTab, className, onChange}) => {
     const [activeTab, setActiveTab] = useState<string | undefined>(defaultActiveTab)
 
     return (
@@ -22,6 +23,7 @@ export const TabNav: React.FC<TabNavProps> = ({children, defaultActiveTab, class
                 const onClick = () => {
                     setActiveTab(item.props.id)
                     item.props.onClick?.()
+                    onChange && onChange(item.props.id)
                 }
                 return React.cloneElement(item, { isActive, onClick })
             }

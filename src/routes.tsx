@@ -2,6 +2,7 @@ import { css } from "@emotion/css"
 import {Routes as ReactRouterRoutes, Route, Outlet, Link} from "react-router-dom"
 import { Button } from "./components/atoms/Button/Button"
 import { Login } from "./components/pages/Login"
+import { MyPage } from "./components/pages/MyPage/MyPage"
 import { RegistProfile } from "./components/pages/RegistProfile"
 import { Signup } from "./components/pages/Signup"
 import { Top } from "./components/pages/Top"
@@ -24,6 +25,7 @@ export const Routes = () => {
             {loggedIn && (
                 <Route element={<AppLayout><Outlet /></AppLayout>}>
                     <Route path="/" element={<Top />} />
+                    <Route path="/mypage" element={<MyPage />} />
                 </Route>
             )}
         </ReactRouterRoutes>

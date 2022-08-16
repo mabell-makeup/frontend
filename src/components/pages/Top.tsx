@@ -3,8 +3,7 @@ import { useQueryWrapper } from "../../helper/reactQueryWrapper"
 import { Headline } from "../atoms/Headline/Headline"
 import { ImageList } from "../organisms/ImageList/ImageList"
 import { MenuNav } from "../organisms/MenuNav/MenuNav"
-import { TabNav } from "../organisms/TabNav/TabNav"
-import { TabNavItem } from "../organisms/TabNavItem/TabNavItem"
+import { TopNavigation } from "../organisms/TopNavigation/TopNavigation"
 
 // MEMO: サイドナビゲーションを含むことを考慮すると、Templatesに移行したほうがいいかもしれない。
 
@@ -23,12 +22,7 @@ export const Top = () => {
 
     return (
         <div className={styles.container}>
-            <TabNav defaultActiveTab="top" className={styles.header}>
-                <TabNavItem id="top">TOP</TabNavItem>
-                <TabNavItem id="time-line">タイムライン</TabNavItem>
-                <TabNavItem id="search">さがす</TabNavItem>
-                <TabNavItem id="my-clip">マイクリップ</TabNavItem>
-            </TabNav>
+            <TopNavigation className={styles.header} />
             <MenuNav title="探す" menus={[{title: "色から探す"}, {title: "アイテムから探す"}, {title: "ジャンルから探す"}, {title: "ユーザーを探す"}]} className={styles.left} />
             <div className={styles.main}>
                 <Headline>トレンド</Headline>

@@ -9,7 +9,13 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { Provider } from 'react-redux'
 import { store } from './store'
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+    defaultOptions: {
+        queries: {
+          refetchOnWindowFocus: false,
+        },
+    }
+})
 
 const container = document.getElementById('root');
 render(

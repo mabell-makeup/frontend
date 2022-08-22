@@ -2,10 +2,13 @@ import { css } from "@emotion/css"
 import { useState } from "react"
 import { Button } from "../../atoms/Button/Button"
 
+type FileInputProps = {
+    onSetPreview?: () => void
+}
 
-export const FileInput = () => {
+export const FileInput: React.FC<FileInputProps> = ({onSetPreview}) => {
     const [preview, setPreview] = useState<preview>()
-    const onDrop = createDropHandler(setPreview)
+    const onDrop = createDropHandler(setPreview, onSetPreview)
     
     return (
         <div id="drop_zone" onDrop={onDrop} onDragOver={onDragOver} className={styles.container}>
@@ -31,7 +34,10 @@ const Ready = () => {
     )
 }
 
-const createDropHandler = (setPreview: React.Dispatch<React.SetStateAction<preview>>) => (event: React.DragEvent<HTMLDivElement>) => {
+const createDropHandler = (
+    setPreview: React.Dispatch<React.SetStateAction<preview>>,
+    onSetPreview: FileInputProps["onSetPreview"]
+) => (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault()
     const files = event.dataTransfer.files
     if (files) {
@@ -39,6 +45,7 @@ const createDropHandler = (setPreview: React.Dispatch<React.SetStateAction<previ
         const reader = new FileReader()
         reader.onload = (e: ProgressEvent<FileReader>) => {
             setPreview(e?.target?.result)
+            onSetPreview && onSetPreview()
         }
         reader.readAsDataURL(file)
     }

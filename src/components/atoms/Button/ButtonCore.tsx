@@ -27,6 +27,10 @@ const styles = {
     button: css({
         display: "flex",
         alignItems: "center",
-        gap: 4
+        gap: 4,
+        cursor: "pointer",
+        ":hover": {
+            opacity: "0.7",
+        }
     })
 }

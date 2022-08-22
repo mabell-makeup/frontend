@@ -1,5 +1,4 @@
 import { css } from "@emotion/css"
-import { classNames } from "../../../helper/style"
 import { Avatar } from "../../atoms/Avatar/Avatar"
 
 type UserHeaderProps = {

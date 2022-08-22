@@ -24,20 +24,24 @@ export const Modal: React.FC<ModalProps> = ({children, className, ...headerProps
 
 type ModalHeaderProps = {
     title?: string
+    description?: string
     handleClose?: () => void
 }
 
-const ModalHeader: React.FC<ModalHeaderProps> = ({title, handleClose}) => {
+const ModalHeader: React.FC<ModalHeaderProps> = ({title, description, handleClose}) => {
     return (
         <div className={styles.modalHeader}>
-            <Button
-                variant="text"
-                startIcon="FiChevronLeft"
-                iconProps={{size: 30, color: "6F6F6F"}}
-                className={styles.back}
-            >
-                {title}
-            </Button>
+            <div>
+                <Button
+                    variant="text"
+                    startIcon="FiChevronLeft"
+                    iconProps={{size: 30, color: "6F6F6F"}}
+                    className={styles.back}
+                >
+                    {title}
+                </Button>
+                <p className={styles.description}>{description}</p>
+            </div>
             <Icon
                 className={styles.close}
                 name="MdClose"
@@ -66,6 +70,11 @@ const styles = {
     back: css({
         fontSize: 18,
         borderBottom: "none !important",
+    }),
+    description: css({
+        marginTop: 4,
+        paddingLeft: 40,
+        fontSize: 14,
     }),
     close: css({
         marginLeft: "auto",

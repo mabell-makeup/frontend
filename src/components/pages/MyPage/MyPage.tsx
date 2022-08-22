@@ -1,6 +1,9 @@
 import { css } from "@emotion/css"
+import { useState } from "react";
 import { useQueryWrapper } from "../../../helper/reactQueryWrapper";
+import { Button } from "../../atoms/Button/Button";
 import { Divider } from "../../atoms/Divider/Divider";
+import { CreatePostModal } from "../../organisms/CreatePostModal/CreatePostModal";
 import { ImageList } from "../../organisms/ImageList/ImageList";
 import { TabNav } from "../../organisms/TabNav/TabNav";
 import { TabNavItem } from "../../organisms/TabNavItem/TabNavItem";
@@ -19,6 +22,7 @@ type MyPageProps = {
 }
 
 export const MyPage: React.FC<MyPageProps> = () => {
+    const [modalVisible, setModalVisible] = useState(false)
     return (
         <div className={styles.container}>
             <div className={styles.header}>
@@ -26,12 +30,13 @@ export const MyPage: React.FC<MyPageProps> = () => {
                 <UserHeader user={sampleUser} />
                 <Divider />
             </div>
-            <Content />
+            <Content onCreatePost={setModalVisible} />
+            {modalVisible && <CreatePostModal handleClose={() => setModalVisible(false)} />}
         </div>
     );
 }
 
-const Content = () => {
+const Content = ({onCreatePost}: {onCreatePost: (visible: boolean) => void}) => {
     const {data, refetch, isFetching} = useQueryWrapper<any>('https://dog.ceo/api/breeds/image/random/10', {
         requestOptions: { method: "GET" },
         queryKey: 'sea',
@@ -39,11 +44,12 @@ const Content = () => {
 
     return (
         <div className={styles.main}>
-            <div className={styles.tabNav}>
+            <div className={styles.contentHeader}>
                 <TabNav defaultActiveTab="posts" onChange={() => refetch()}>
                     <TabNavItem id="posts">投稿</TabNavItem>
                     <TabNavItem id="clips">クリップ</TabNavItem>
                 </TabNav>
+                <Button className={styles.createPostButton} onClick={() => onCreatePost(true)}>メイクを登録</Button>
             </div>
             {data?.message && !isFetching && <ImageList images={data?.message} />}
         </div>
@@ -70,12 +76,10 @@ const styles = {
         flexFlow: "column",
         gap: 30,
     }),
-    tabNav: css({
+    contentHeader: css({
         display: "flex",
     }),
-    trendContainer: css({
-        display: "flex",
-        flexFlow: "column",
-        gap: 16,
+    createPostButton : css({
+        marginLeft: "auto",
     })
 }

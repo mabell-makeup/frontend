@@ -1,16 +1,27 @@
 import { css } from "@emotion/css"
 import { classNames } from "../../../helper/style"
+import { Icon } from "../../atoms/Icon/Icon"
 import { Overlay } from "../../atoms/Overlay/Overlay"
 
-type ModalProps = {
+export type ModalProps = {
     children?: React.ReactNode
     className?: string
+    handleClose?: () => void
 }
 
-export const Modal: React.FC<ModalProps> = ({children, className}) => {
+export const Modal: React.FC<ModalProps> = ({children, className, handleClose}) => {
     return (
         <Overlay>
             <div className={classNames([styles.container, className])}>
+                <div className={styles.modalHeader}>
+                    <Icon
+                        className={styles.close}
+                        name="MdClose"
+                        size={30}
+                        color="#D9D9D9"
+                        onClick={handleClose}
+                    />
+                </div>
                 {children}
             </div>
         </Overlay>
@@ -23,6 +34,17 @@ const styles = {
         minWidth: 200,
         borderRadius: "4px",
         background: "#FFFFFF",
-        padding: "40px 20px",
+        padding: "10px 20px 40px 20px",
+    }),
+    modalHeader: css({
+        display: "flex",
+        marginBottom: 20,
+    }),
+    close: css({
+        marginLeft: "auto",
+        cursor: "pointer",
+        ":hover": {
+            color: "#C4C4C4 !important"
+        }
     })
 }

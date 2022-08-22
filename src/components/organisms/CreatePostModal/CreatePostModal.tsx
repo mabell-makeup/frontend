@@ -3,9 +3,9 @@ import { FileInput } from "../FileInput/FileInput"
 
 type CreatePostModalProps = ModalProps
 
-export const CreatePostModal: React.FC<CreatePostModalProps> = ({ handleClose }) => {
+export const CreatePostModal: React.FC<CreatePostModalProps> = ({ ...modalProps }) => {
     return (
-        <Modal handleClose={handleClose}>
+        <Modal {...modalProps}>
             <FileInput />
         </Modal>
     )

@@ -31,7 +31,12 @@ export const MyPage: React.FC<MyPageProps> = () => {
                 <Divider />
             </div>
             <Content onCreatePost={setModalVisible} />
-            {modalVisible && <CreatePostModal handleClose={() => setModalVisible(false)} />}
+            {modalVisible && (
+                <CreatePostModal
+                    title="画像を選択"
+                    handleClose={() => setModalVisible(false)}
+                />
+            )}
         </div>
     );
 }

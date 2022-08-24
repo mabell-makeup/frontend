@@ -14,9 +14,7 @@ export const Modal: React.FC<ModalProps> = ({children, className, ...headerProps
         <Overlay>
             <div className={classNames([styles.container, className])}>
                 <ModalHeader {...headerProps} />
-                <div className={styles.content}>
-                    {children}
-                </div>
+                {children}
             </div>
         </Overlay>
     )
@@ -83,7 +81,4 @@ const styles = {
             opacity: "0.7",
         }
     }),
-    content: css({
-        margin: "0 60px",
-    })
 }

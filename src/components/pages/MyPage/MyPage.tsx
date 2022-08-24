@@ -33,7 +33,6 @@ export const MyPage: React.FC<MyPageProps> = () => {
             <Content onCreatePost={setModalVisible} />
             {modalVisible && (
                 <CreatePostModal
-                    title="画像を選択"
                     handleClose={() => setModalVisible(false)}
                 />
             )}

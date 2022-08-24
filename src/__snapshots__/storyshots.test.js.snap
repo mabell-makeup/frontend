@@ -1,5 +1,102 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots atoms/Button Primary 1`] = `
+<button
+  className="css-171onha css-1vuidc"
+>
+  <svg
+    fill="none"
+    height="1em"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+    viewBox="0 0 24 24"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <polyline
+      points="15 18 9 12 15 6"
+    />
+  </svg>
+  ボタン
+</button>
+`;
+
+exports[`Storyshots atoms/Button Text 1`] = `
+<button
+  className="css-171onha css-nmuous"
+>
+  ボタン
+  <svg
+    fill="none"
+    height="1em"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    style={
+      Object {
+        "color": undefined,
+      }
+    }
+    viewBox="0 0 24 24"
+    width="1em"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <polyline
+      points="9 18 15 12 9 6"
+    />
+  </svg>
+</button>
+`;
+
+exports[`Storyshots atoms/Checkbox Dafult 1`] = `
+<div
+  className="css-nk32ej"
+>
+  <div
+    className="css-16trnkj"
+    onClick={[Function]}
+  >
+    <input
+      className="css-1hyfx7x"
+      type="checkbox"
+      value="false"
+    />
+    <svg
+      color="#D9D9D9"
+      fill="currentColor"
+      height={18}
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": "#D9D9D9",
+        }
+      }
+      viewBox="0 0 24 24"
+      width={18}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+      <path
+        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+      />
+    </svg>
+    同意する
+  </div>
+</div>
+`;
+
 exports[`Storyshots atoms/Icon Dafult 1`] = `
 <div
   className="css-nk32ej"
@@ -38,6 +135,7 @@ exports[`Storyshots atoms/Overlay Dafult 1`] = `
   className="css-nk32ej"
 >
   <button
+    className="css-171onha css-1vuidc"
     onClick={[Function]}
   >
     オーバーレイを表示する
@@ -72,10 +170,112 @@ exports[`Storyshots atoms/Overlay Dafult 1`] = `
         オーバーレイ表示中はスクロールができません。
       </h1>
       <button
+        className="css-171onha css-1vuidc"
         onClick={[Function]}
       >
         閉じる
       </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots atoms/SelectCore Dafult 1`] = `
+<div
+  className=" css-b62m3t-container"
+  onKeyDown={[Function]}
+>
+  <span
+    className="css-1f43avz-a11yText-A11yText"
+    id="react-select-2-live-region"
+  />
+  <span
+    aria-atomic="false"
+    aria-live="polite"
+    aria-relevant="additions text"
+    className="css-1f43avz-a11yText-A11yText"
+  />
+  <div
+    className=" css-1s2u09g-control"
+    onMouseDown={[Function]}
+    onTouchEnd={[Function]}
+  >
+    <div
+      className=" css-319lph-ValueContainer"
+    >
+      <div
+        className=" css-14el2xx-placeholder"
+        id="react-select-2-placeholder"
+      >
+        Select...
+      </div>
+      <div
+        className=" css-6j8wv5-Input"
+        data-value=""
+      >
+        <input
+          aria-autocomplete="list"
+          aria-describedby="react-select-2-placeholder"
+          aria-expanded={false}
+          aria-haspopup={true}
+          autoCapitalize="none"
+          autoComplete="off"
+          autoCorrect="off"
+          className=""
+          disabled={false}
+          id="react-select-2-input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          role="combobox"
+          spellCheck="false"
+          style={
+            Object {
+              "background": 0,
+              "border": 0,
+              "color": "inherit",
+              "font": "inherit",
+              "gridArea": "1 / 2",
+              "label": "input",
+              "margin": 0,
+              "minWidth": "2px",
+              "opacity": 1,
+              "outline": 0,
+              "padding": 0,
+              "width": "100%",
+            }
+          }
+          tabIndex={0}
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className=" css-1hb7zxy-IndicatorsContainer"
+    >
+      <span
+        className=" css-1okebmr-indicatorSeparator"
+      />
+      <div
+        aria-hidden="true"
+        className=" css-tlfecz-indicatorContainer"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <svg
+          aria-hidden="true"
+          className="css-tj5bde-Svg"
+          focusable="false"
+          height={20}
+          viewBox="0 0 20 20"
+          width={20}
+        >
+          <path
+            d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+          />
+        </svg>
+      </div>
     </div>
   </div>
 </div>

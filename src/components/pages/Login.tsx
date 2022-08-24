@@ -1,9 +1,8 @@
 import { css } from "@emotion/css"
 import { login } from "../../slices/auth"
 import { Button } from "../atoms/Button/Button"
-import { TextButton } from "../atoms/TextButton/TextButton"
 import { TextInputCore } from "../atoms/TextInputCore/TextInputCore"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import { useDispatch } from "react-redux"
 
 export const Login = () => {
@@ -19,7 +18,7 @@ export const Login = () => {
             <div className={styles.mailLoginForm}>
                 <TextInputCore placeholder="メールアドレス" />
                 <TextInputCore placeholder="パスワード" />
-                <TextButton>忘れた方はこちら</TextButton>
+                <Button variant="text">忘れた方はこちら</Button>
             </div>
             <div className={styles.socialLoginForm}>
                 <Button>Googleでログイン</Button>
@@ -27,7 +26,7 @@ export const Login = () => {
             </div>
             <Button onClick={onLogin}>ログイン</Button>
             <h2>アカウントを持っていない方</h2>
-            <Button>新規登録</Button>
+            <Link to="/signup"><Button>新規登録</Button></Link>
         </div>
     )
 }

@@ -2,8 +2,10 @@ import * as iconsMd from "react-icons/md"
 import * as iconsFi from "react-icons/fi"
 import {IconBaseProps} from "react-icons"
 
+export type icon = keyof typeof iconsFi | keyof typeof iconsMd
+
 type IconProps = IconBaseProps & {
-  name: keyof typeof iconsFi | keyof typeof iconsMd
+  name: icon
 }
 
 const icons = {...iconsMd, ...iconsFi}

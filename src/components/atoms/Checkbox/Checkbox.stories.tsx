@@ -1,16 +1,16 @@
 import { css } from "@emotion/css"
 import { ComponentStory, ComponentMeta } from "@storybook/react"
-import { Icon } from "./Icon"
+import { Checkbox } from "./Checkbox"
 
 export default {
-    title: "atoms/Icon",
-    component: Icon,
-} as ComponentMeta<typeof Icon>
+    title: "atoms/Checkbox",
+    component: Checkbox,
+} as ComponentMeta<typeof Checkbox>
 
-const Template: ComponentStory<typeof Icon> = (args) => {
+const Template: ComponentStory<typeof Checkbox> = (args) => {
     return (
         <div className={css({padding: 10})}>
-            <Icon {...args} />
+            <Checkbox {...args} />
         </div>
     )
 }
@@ -18,7 +18,5 @@ const Template: ComponentStory<typeof Icon> = (args) => {
 export const Dafult = Template.bind({})
 
 Dafult.args = {
-    name: "FiCamera",
-    color: "#000000",
-    size: 20,
+    children: "同意する"
 }

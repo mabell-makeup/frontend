@@ -1,4 +1,5 @@
 import { css } from "@emotion/css"
+import { enableScroll } from "../../../helper/scrollControl"
 import { classNames } from "../../../helper/style"
 import { Button } from "../../atoms/Button/Button"
 import { Icon } from "../../atoms/Icon/Icon"
@@ -27,6 +28,10 @@ type ModalHeaderProps = {
 }
 
 const ModalHeader: React.FC<ModalHeaderProps> = ({title, description, handleClose}) => {
+    const onClose = () => {
+        handleClose && handleClose()
+        enableScroll()
+    }
     return (
         <div className={styles.modalHeader}>
             <div>
@@ -45,7 +50,7 @@ const ModalHeader: React.FC<ModalHeaderProps> = ({title, description, handleClos
                 name="MdClose"
                 size={30}
                 color="6F6F6F"
-                onClick={handleClose}
+                onClick={onClose}
             />
     </div>
     )

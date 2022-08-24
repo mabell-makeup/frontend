@@ -15,7 +15,6 @@ export type ButtonCoreProps = {
 }
 
 export const ButtonCore: React.FC<ButtonCoreProps> = ({children, onClick, className, startIcon, endIcon, iconProps, disabled=false}) => {
-    console.log({disabled})
     const styles = createStyles(disabled)
     return (
         <button onClick={onClick} className={classNames([styles.button, className])} disabled={disabled}>

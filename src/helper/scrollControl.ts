@@ -7,11 +7,11 @@ const options: AddEventListenerOptions = {
 }
 
 export const disableScroll = () => {
-    document.addEventListener('touchmove', handle, options)
-    document.addEventListener('mousewheel', handle, options)
+    document.addEventListener("touchmove", handle, options)
+    document.addEventListener("mousewheel", handle, options)
 }
 
 export const enableScroll = () => {
-    document.removeEventListener('touchmove', handle, options)
-    document.removeEventListener('mousewheel', handle, options)
+    document.removeEventListener("touchmove", handle, options)
+    document.removeEventListener("mousewheel", handle, options)
 }

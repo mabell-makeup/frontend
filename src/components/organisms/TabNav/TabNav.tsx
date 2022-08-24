@@ -14,21 +14,21 @@ export const TabNav: React.FC<TabNavProps> = ({children, defaultActiveTab, class
 
     return (
         <div className={classNames([styles.container, className])}>
-          {React.Children.map(children, (child) => {
-            const item = child as React.ReactElement<React.PropsWithChildren<TabNavItemProps>>
+            {React.Children.map(children, (child) => {
+                const item = child as React.ReactElement<React.PropsWithChildren<TabNavItemProps>>
 
-            if (item.type === TabNavItem) {
-                const isActive = item.props.id === activeTab
-                const onClick = () => {
-                    setActiveTab(item.props.id)
-                    item.props.onClick?.()
+                if (item.type === TabNavItem) {
+                    const isActive = item.props.id === activeTab
+                    const onClick = () => {
+                        setActiveTab(item.props.id)
+                        item.props.onClick?.()
+                    }
+                    return React.cloneElement(item, { isActive, onClick })
                 }
-                return React.cloneElement(item, { isActive, onClick })
-            }
 
-            return child
-          })}
-      </div>
+                return child
+            })}
+        </div>
     )
 }
 

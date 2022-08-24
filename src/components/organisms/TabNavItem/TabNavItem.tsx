@@ -15,9 +15,9 @@ export const TabNavItem: React.FC<TabNavItemProps> = ({children, id, isActive, o
 
     return (
         <div
-          id={id}
-          onClick={onClick}
-          className={classNames([styles.container, className])}
+            id={id}
+            onClick={onClick}
+            className={classNames([styles.container, className])}
         >
             {children}
         </div>

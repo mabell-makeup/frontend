@@ -7,7 +7,7 @@ export type CardProps = {
 }
 
 
-const Image: React.FC<Pick<CardProps, "src" | "alt">> = ({src, alt}) => {
+const Image: React.FC<Pick<CardProps, "src" | "alt">> = ({src="", alt=""}) => {
     if (src) {
         return <img src={src} alt={alt} className={styles.image} />
     }

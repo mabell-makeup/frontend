@@ -1,18 +1,18 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { App } from './App';
-import { Global } from '@emotion/react'
-import emotionReset from 'emotion-reset';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import reportWebVitals from './reportWebVitals';
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { Provider } from 'react-redux'
-import { store } from './store'
+import React from "react"
+import { render } from "react-dom"
+import { App } from "./App"
+import { Global } from "@emotion/react"
+import emotionReset from "emotion-reset"
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration"
+import reportWebVitals from "./reportWebVitals"
+import { QueryClient, QueryClientProvider } from "react-query"
+import { Provider } from "react-redux"
+import { store } from "./store"
 
 const queryClient = new QueryClient()
 
 
-const container = document.getElementById('root');
+const container = document.getElementById("root")
 render(
     <React.StrictMode>
         <QueryClientProvider client={queryClient}>
@@ -23,7 +23,7 @@ render(
         </QueryClientProvider>
     </React.StrictMode>
     , container
-);
+)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

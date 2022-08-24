@@ -1,6 +1,6 @@
-import { css } from "@emotion/css";
-import { Avatar } from "../../atoms/Avatar/Avatar";
-import { Icon } from "../../atoms/Icon/Icon";
+import { css } from "@emotion/css"
+import { Avatar } from "../../atoms/Avatar/Avatar"
+import { Icon } from "../../atoms/Icon/Icon"
 import { Card, CardProps } from "../../molecules/Card/Card"
 
 type PostCardProps = CardProps & {

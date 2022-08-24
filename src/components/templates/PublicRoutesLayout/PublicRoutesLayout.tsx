@@ -1,7 +1,7 @@
 import { css } from "@emotion/css"
-import { FOOTER_HEIGHT, HEADER_HEIGHT } from "../../../constants/style";
-import { Header } from '../../organisms/Header/Header';
-import { Footer } from '../../organisms/Footer/Footer';
+import { FOOTER_HEIGHT, HEADER_HEIGHT } from "../../../constants/style"
+import { Header } from "../../organisms/Header/Header"
+import { Footer } from "../../organisms/Footer/Footer"
 
 type PublicRoutesLayoutProps = {
     children?: React.ReactNode
@@ -16,7 +16,7 @@ export const PublicRoutesLayout: React.FC<PublicRoutesLayoutProps> = ({ children
             </div>
             <Footer className={styles.footer} />
         </div>
-    );
+    )
 }
 
 const styles = {

@@ -33,6 +33,7 @@ describe("MenuNav", () => {
         testMenus.forEach(({title, onClick}) => {
             const menu = screen.getByText(title)
             fireEvent.click(menu)
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             expect(onClick.mock.calls.length).toBe(1)
         })

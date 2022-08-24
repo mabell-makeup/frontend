@@ -14,6 +14,6 @@ const icons = {...iconsMd, ...iconsFi}
  * - [Material Design icons](https://react-icons.github.io/react-icons/icons?name=md)
  */
 export const Icon: React.FC<IconProps> = ({name, ...props}) => {
-  const IconCore = icons[name]
-  return <IconCore {...props} />
+    const IconCore = icons[name]
+    return <IconCore {...props} />
 }

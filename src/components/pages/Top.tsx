@@ -9,16 +9,16 @@ import { TabNavItem } from "../organisms/TabNavItem/TabNavItem"
 // MEMO: サイドナビゲーションを含むことを考慮すると、Templatesに移行したほうがいいかもしれない。
 
 export const Top = () => {
-    const purple = useQueryWrapper<any>('https://dog.ceo/api/breeds/image/random/3', {
-            requestOptions: { method: "GET" },
-            queryKey: 'trend',
-            queryOptions: {staleTime: Infinity}
-    });
-    const sea = useQueryWrapper<any>('https://dog.ceo/api/breeds/image/random/3', {
-            requestOptions: { method: "GET" },
-            queryKey: 'sea',
-            queryOptions: {staleTime: Infinity}
-    });
+    const purple = useQueryWrapper<any>("https://dog.ceo/api/breeds/image/random/3", {
+        requestOptions: { method: "GET" },
+        queryKey: "trend",
+        queryOptions: {staleTime: Infinity}
+    })
+    const sea = useQueryWrapper<any>("https://dog.ceo/api/breeds/image/random/3", {
+        requestOptions: { method: "GET" },
+        queryKey: "sea",
+        queryOptions: {staleTime: Infinity}
+    })
     
 
     return (

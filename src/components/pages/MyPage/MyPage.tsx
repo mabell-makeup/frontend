@@ -1,11 +1,11 @@
 import { css } from "@emotion/css"
-import { useQueryWrapper } from "../../../helper/reactQueryWrapper";
-import { Divider } from "../../atoms/Divider/Divider";
-import { ImageList } from "../../organisms/ImageList/ImageList";
-import { TabNav } from "../../organisms/TabNav/TabNav";
-import { TabNavItem } from "../../organisms/TabNavItem/TabNavItem";
-import { TopNavigation } from "../../organisms/TopNavigation/TopNavigation";
-import { UserHeader } from "../../organisms/UserHeader/UserHeader";
+import { useQueryWrapper } from "../../../helper/reactQueryWrapper"
+import { Divider } from "../../atoms/Divider/Divider"
+import { ImageList } from "../../organisms/ImageList/ImageList"
+import { TabNav } from "../../organisms/TabNav/TabNav"
+import { TabNavItem } from "../../organisms/TabNavItem/TabNavItem"
+import { TopNavigation } from "../../organisms/TopNavigation/TopNavigation"
+import { UserHeader } from "../../organisms/UserHeader/UserHeader"
 
 const sampleUser = {
     name: "あり。",
@@ -28,14 +28,14 @@ export const MyPage: React.FC<MyPageProps> = () => {
             </div>
             <Content />
         </div>
-    );
+    )
 }
 
 const Content = () => {
-    const {data, refetch, isFetching} = useQueryWrapper<any>('https://dog.ceo/api/breeds/image/random/10', {
+    const {data, refetch, isFetching} = useQueryWrapper<any>("https://dog.ceo/api/breeds/image/random/10", {
         requestOptions: { method: "GET" },
-        queryKey: 'sea',
-    });
+        queryKey: "sea",
+    })
 
     return (
         <div className={styles.main}>

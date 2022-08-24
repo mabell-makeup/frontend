@@ -1,10 +1,10 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { UserHeader } from './UserHeader';
+import { ComponentStory, ComponentMeta } from "@storybook/react"
+import { UserHeader } from "./UserHeader"
 
 export default {
-    title: 'organisms/UserHeader',
+    title: "organisms/UserHeader",
     component: UserHeader,
-} as ComponentMeta<typeof UserHeader>;
+} as ComponentMeta<typeof UserHeader>
 
 
 const Template: ComponentStory<typeof UserHeader> = (args) => {
@@ -13,7 +13,7 @@ const Template: ComponentStory<typeof UserHeader> = (args) => {
     )
 }
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 
 Default.args = {
     user: {

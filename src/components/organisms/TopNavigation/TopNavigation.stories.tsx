@@ -1,14 +1,14 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { TopNavigation } from './TopNavigation';
+import { ComponentStory, ComponentMeta } from "@storybook/react"
+import { TopNavigation } from "./TopNavigation"
 
 export default {
-    title: 'organisms/TopNavigation',
+    title: "organisms/TopNavigation",
     component: TopNavigation,
-} as ComponentMeta<typeof TopNavigation>;
+} as ComponentMeta<typeof TopNavigation>
 
 
 const Template: ComponentStory<typeof TopNavigation> = () => {
     return <TopNavigation />
 }
 
-export const Dafult = Template.bind({});
+export const Dafult = Template.bind({})

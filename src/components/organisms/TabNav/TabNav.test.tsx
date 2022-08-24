@@ -1,6 +1,6 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import { TabNav } from "./TabNav";
-import { TabNavItem } from "../TabNavItem/TabNavItem";
+import { fireEvent, render, screen } from "@testing-library/react"
+import { TabNav } from "./TabNav"
+import { TabNavItem } from "../TabNavItem/TabNavItem"
 
 
 const items = [

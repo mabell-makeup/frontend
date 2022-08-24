@@ -5,8 +5,8 @@ type TextInputProps = InputContainerProps
 
 export const TextInput: React.FC<TextInputProps> = ({label}) => {
     return (
-            <InputContainer label={label}>
-                <TextInputCore />
-            </InputContainer>
+        <InputContainer label={label}>
+            <TextInputCore />
+        </InputContainer>
     )
 }

@@ -12,7 +12,9 @@
     "snapshot-approve": "react-scripts test --watchAll=false src/storyshots.test.js -u",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "lint": "eslint './**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "eslint --fix './**/*.{js,jsx,ts,tsx}'"
   },
   "eslintConfig": {
     "extends": [
@@ -92,10 +94,15 @@
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.4.20",
     "@storybook/testing-library": "^0.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
     "@testing-library/react": "^12.1.5",
     "@types/react-datepicker": "^4.4.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "eslint": "^8.17.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-storybook": "^0.5.12",
     "react-refresh": "0.11.0",
     "webpack": "^5.71.0"
   }

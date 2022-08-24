@@ -1,10 +1,10 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { SelectCore } from './SelectCore';
+import { ComponentStory, ComponentMeta } from "@storybook/react"
+import { SelectCore } from "./SelectCore"
 
 export default {
-    title: 'atoms/SelectCore',
+    title: "atoms/SelectCore",
     component: SelectCore,
-} as ComponentMeta<typeof SelectCore>;
+} as ComponentMeta<typeof SelectCore>
 
 const Template: ComponentStory<typeof SelectCore> = (args) => {
     return (
@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof SelectCore> = (args) => {
     )
 }
 
-export const Dafult = Template.bind({});
+export const Dafult = Template.bind({})
 
 Dafult.args = {
     options: [

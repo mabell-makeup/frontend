@@ -1,11 +1,11 @@
-import { css } from '@emotion/css';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { FileInput } from './FileInput';
+import { css } from "@emotion/css"
+import { ComponentStory, ComponentMeta } from "@storybook/react"
+import { FileInput } from "./FileInput"
 
 export default {
-    title: 'organisms/FileInput',
+    title: "organisms/FileInput",
     component: FileInput,
-} as ComponentMeta<typeof FileInput>;
+} as ComponentMeta<typeof FileInput>
 
 
 const Template: ComponentStory<typeof FileInput> = () => {
@@ -16,4 +16,4 @@ const Template: ComponentStory<typeof FileInput> = () => {
     )
 }
 
-export const Dafult = Template.bind({});
+export const Dafult = Template.bind({})

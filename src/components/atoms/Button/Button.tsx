@@ -9,9 +9,9 @@ export type ButtonProps = ButtonCoreProps & {
 
 export const Button: React.FC<ButtonProps> = (props) => {
     switch (props.variant) {
-        case "text":
-            return <TextButton {...props} />
-        default:
-            return <PrimaryButton {...props} />
+    case "text":
+        return <TextButton {...props} />
+    default:
+        return <PrimaryButton {...props} />
     }
 }

@@ -7,16 +7,18 @@ import { ButtonCore, ButtonCoreProps } from "./ButtonCore"
  * `Button`コンポーネントの`type="primary"`を利用してください
  */
 export const PrimaryButton: React.FC<ButtonCoreProps> = ({className, ...props}) => {
+    const styles = createStyles(props.disabled)
     return (
         <ButtonCore {...props} className={classNames([styles.primary, className])} />
     )
 }
 
-const styles = {
+const createStyles = (disabled?: boolean) => ({
     primary: css({
-        border: "1px solid #000000",
+        border: `1px solid ${disabled ? "#C4C4C4" : "#000000"}`,
+        color: disabled ? "#C4C4C4" : "#000000",
         padding: "10px 20px",
         boxSizing: "border-box",
         background: "transparent",
     })
-}
+})

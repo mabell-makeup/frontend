@@ -11,11 +11,14 @@ export type ButtonCoreProps = {
   startIcon?: icon
   endIcon?: icon
   iconProps?: IconBaseProps
+  disabled?: boolean
 }
 
-export const ButtonCore: React.FC<ButtonCoreProps> = ({children, onClick, className, startIcon, endIcon, iconProps}) => {
+export const ButtonCore: React.FC<ButtonCoreProps> = ({children, onClick, className, startIcon, endIcon, iconProps, disabled=false}) => {
+    console.log({disabled})
+    const styles = createStyles(disabled)
     return (
-        <button onClick={onClick} className={classNames([styles.button, className])}>
+        <button onClick={onClick} className={classNames([styles.button, className])} disabled={disabled}>
             {startIcon && <Icon {...iconProps} name={startIcon} />}
             {children}
             {endIcon && <Icon {...iconProps} name={endIcon} />}
@@ -23,14 +26,14 @@ export const ButtonCore: React.FC<ButtonCoreProps> = ({children, onClick, classN
     )
 }
 
-const styles = {
+const createStyles = (disabled: boolean) => ({
     button: css({
         display: "flex",
         alignItems: "center",
         gap: 4,
-        cursor: "pointer",
+        cursor: disabled ? "inherit" : "pointer",
         ":hover": {
-            opacity: "0.7",
+            opacity: disabled ? undefined : "0.7",
         }
     })
-}
+})
